@@ -19,7 +19,7 @@ Please reach out to us on our slack channel, `#sdss-compute-users`, at [sdss-com
 ## How to Install a Custom Jupyter Lab Kernel from a Containerized Environment
 Installing Python packages with specific versions and dependencies can be challenging in an HPC workspace like Sherlock. One potential solution is to containerize your coding environment (See our [workshop on package management](https://github.com/stanford-sdss/package-management/) to learn how to build your own containers!). We took this approach and containerized our custom Python environment which you can use to access all the Python packages used in this tutorial from an Open On Demand Jupyter Lab session using the following steps. 
 
-1. Copy `geospatial_dask.sif` into your `/home/` directory in Sherlock by running `cp /scratch/users/ellianna/sdss-containers/geospatial_dask.sif`.
+1. Copy `geospatial_dask.sif` into your `/home/` directory in Sherlock by running `cp /scratch/users/ellianna/sdss-containers/geospatial_dask.sif ~/geospatial_dask.sif`.
 2. Change directory into your copy of this repository. This might be `cd /scratch/users/<your-sunet>/dask-for-geospatial-data/`.
 3. Run `chmod +x update-kernel.sh` from the command line.
 4. Next, run `source update-kernel.sh` from the command line.
