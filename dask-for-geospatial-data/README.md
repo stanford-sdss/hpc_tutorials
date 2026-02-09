@@ -6,7 +6,7 @@ In today's workshop we are going to cover how to interact with satellite data th
 
 ### Today's Tutorial Agenda:
 1. Launch an interactive Jupyter Lab session on Sherlock using [Open OnDemand](https://ondemand.sherlock.stanford.edu/pun/sys/dashboard/batch_connect/sys/sh_jupyterlab/session_contexts/new)
-2. Install a Custom Jupyter Lab Kernel from a Containerized Environment
+2. Install a Custom Jupyter Lab Kernel from a Containerized Environment [[instructions](#how-to-install-a-custom-jupyter-lab-kernel-from-a-containerized-environment)]
 3. What is `dask` and how does it distribute data? [[tutorial](https://github.com/stanford-sdss/hpc_tutorials/blob/main/dask-for-geospatial-data/dask_for_geospatial.ipynb)]
 4. Interacting with large satellite imagery using `dask` [[tutorial](https://github.com/stanford-sdss/hpc_tutorials/blob/main/dask-for-geospatial-data/dask_for_geospatial.ipynb)]
 5. Running custom functions on select pixels using `dask` + `xarray` [[tutorial](https://github.com/stanford-sdss/hpc_tutorials/blob/main/dask-for-geospatial-data/dask_for_geospatial.ipynb)]
@@ -16,7 +16,7 @@ Please reach out to us on our slack channel, `#sdss-compute-users`, at [sdss-com
 
 ---
 
-# How to Install a Custom Jupyter Lab Kernel from a Containerized Environment
+## How to Install a Custom Jupyter Lab Kernel from a Containerized Environment
 Installing Python packages with specific versions and dependencies can be challenging in an HPC workspace like Sherlock. One potential solution is to containerize your coding environment (See our [workshop on package management](https://github.com/stanford-sdss/package-management/) to learn how to build your own containers!). We took this approach and containerized our custom Python environment which you can use to access all the Python packages used in this tutorial from an Open On Demand Jupyter Lab session using the following steps. 
 
 1. Copy `geospatial_dask.sif` into your `/home/` directory in Sherlock by running `cp /scratch/users/ellianna/sdss-containers/geospatial_dask.sif`.
