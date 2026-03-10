@@ -1,0 +1,28 @@
+#!/bin/bash
+#SBATCH --job-name=lscratch_example
+#SBATCH --output=lscratch_example_%j.out
+#SBATCH --error=lscratch_example_%j.err
+#SBATCH --time=00:30:00
+#SBATCH --mem=100G
+#SBATCH --partition=serc
+#SBATCH --mail-type=begin                    
+#SBATCH --mail-type=end                      
+#SBATCH --mail-user=<your-sunet-id>@stanford.edu
+
+# Copy your data onto /lscratch/
+# Anything you put on /lscratch/ will automatically purge when your compute finishes!
+SECONDS=0
+cp -r /scratch/groups/jfreshwa/workshops/io-for-large-datasets/landsat_images  $L_SCRATCH
+echo "Copy to /lscratch/ took ${SECONDS}s"
+
+# Do some code on your data
+SECONDS=0
+cd $L_SCRATCH/landsat_images
+echo "Counting image files in $PWD..."
+ls *.tif | wc -l > $L_SCRATCH/image_count.txt
+echo "Data analysis took ${SECONDS}s"
+
+# Save outcomes on /scratch/ or /oak/
+SECONDS=0
+cp $L_SCRATCH/image_count.txt /scratch/users/$USER/
+echo "Copy to /scratch/ took ${SECONDS}s"
