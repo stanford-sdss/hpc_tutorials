@@ -7,7 +7,7 @@ In the SDSS research computing environments, data storage is distributed across 
 - Persistence
 - Accessibility
 
-Today, we're going to go over three places you can store and move your data to while computing:
+Today, we're going to go over the places you can store and move your data to while computing at Stanford:
 
 | Storage Location | Typical Use | Performance |
 |---|---|---|
